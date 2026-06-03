@@ -24,7 +24,7 @@ To use this server addon, you'll need the following dependencies installed:
 ## Installation
 
 1. Install [SwiftlyS2](https://github.com/swiftly-solution/swiftlys2) on your server
-2. [Download the latest release](https://github.com/shmitzas/K4-DamageInfo-Upkeep-SwiftlyS2/releases/latest)
+2. [Download the latest release](https://github.com/shmitzas/K4-DamageInfo-Upkeep/releases/latest)
 3. Extract to your server's `swiftlys2/plugins/` directory
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
