@@ -31,7 +31,7 @@ public sealed partial class Plugin
 		var attacker = attackerSlot >= 0 ? Core.PlayerManager.GetPlayer(attackerSlot) : null;
 
 		var data = GetPlayerData(victim.Slot);
-		data.VictimKiller = (attacker != null && IsValidPlayer(attacker)) ? attacker.Slot : -1;
+		data.VictimKiller = IsValidPlayer(attacker) ? attacker.Slot : -1;
 
 		DisplayDamageInfo(victim);
 
@@ -51,14 +51,14 @@ public sealed partial class Plugin
 			return HookResult.Continue;
 
 		var victimTeam = victim.Controller?.Team ?? Team.None;
-		var attackerTeam = attacker!.Controller?.Team ?? Team.None;
+		var attackerTeam = attacker.Controller?.Team ?? Team.None;
 
 		if (victimTeam == attackerTeam && !Config.CurrentValue.ShowFriendlyFire)
 			return HookResult.Continue;
 
-		int dmgHealth = @event.DmgHealth;
-		int dmgArmor = @event.DmgArmor;
-		var hitgroup = (HitGroup_t)@event.HitGroup;
+		int dmgHealth = @event.ActualDmgHealth;
+		int dmgArmor = @event.ActualDmgArmor;
+		var hitgroup = @event.ActualHitGroup;
 
 		if (!attacker.IsFakeClient && (victimTeam != attackerTeam || Config.CurrentValue.FFAMode))
 			ShowLiveDamageInfo(attacker, victim, dmgHealth, dmgArmor, hitgroup);

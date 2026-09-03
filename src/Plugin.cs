@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -10,7 +11,7 @@ namespace K4DamageInfo;
 
 [PluginMetadata(
 	Id = "k4.damageinfo",
-	Version = "1.0.2",
+	Version = "1.0.3",
 	Name = "K4 - Damage Info",
 	Author = "K4ryuu",
 	Description = "Shows damage information to players."
@@ -74,5 +75,5 @@ public sealed partial class Plugin(ISwiftlyCore core) : BasePlugin(core)
 		return data;
 	}
 
-	private static bool IsValidPlayer(IPlayer? player) => player != null && player.IsValid;
+	private static bool IsValidPlayer([NotNullWhen(true)] IPlayer? player) => player != null && player.IsValid;
 }
