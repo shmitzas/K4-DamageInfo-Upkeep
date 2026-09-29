@@ -4,6 +4,13 @@
   <a align="center">A SwiftlyS2 plugin for Counter-Strike 2 that displays damage information to players. Shows real-time center screen damage indicators, console damage logs, and round-end damage summaries.</a>
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
+  <img src="https://img.shields.io/github/downloads/Shmitzas/K4-DamageInfo-Upkeep/total?style=flat&logo=github&cacheSeconds=3600" alt="Downloads">
+  <img src="https://img.shields.io/github/stars/Shmitzas/K4-DamageInfo-Upkeep?style=flat&logo=github&cacheSeconds=3600" alt="Stars">
+  <img src="https://img.shields.io/github/license/Shmitzas/K4-DamageInfo-Upkeep" alt="License">
+</p>
+
 # Important notice!
 > [!IMPORTANT]  
 > [K4ryuu](https://github.com/K4ryuu) is the creator of this plugin.<br>
